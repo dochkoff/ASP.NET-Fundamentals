@@ -19,4 +19,5 @@ In the "ASP.NET Fundamentals" [course](https://softuni.bg/trainings/4367/asp-net
 
 ## Course certificate
 
-In progres...
+![10  Certificate ASP NET Fundamentals](https://github.com/dochkoff/ASP.NET-Fundamentals/assets/74410756/c4312968-ad22-4900-b68e-d90bda497026)
+
