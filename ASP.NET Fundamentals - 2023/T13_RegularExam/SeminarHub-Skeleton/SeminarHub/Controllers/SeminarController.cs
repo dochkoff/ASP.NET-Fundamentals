@@ -20,7 +20,7 @@ namespace SeminarHub.Controllers
             this.data = context;
         }
 
-        
+
         [HttpGet]
         public async Task<IActionResult> Add()
         {
@@ -190,7 +190,7 @@ namespace SeminarHub.Controllers
         public async Task<IActionResult> Join(int id)
         {
             var s = await data.Seminars
-                .Where(s=> s.Id == id)
+                .Where(s => s.Id == id)
                 .Include(e => e.SeminarsParticipants)
                 .FirstOrDefaultAsync();
 
@@ -215,7 +215,7 @@ namespace SeminarHub.Controllers
             return RedirectToAction(nameof(Joined));
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> Leave(int id)
         {
             var e = await data.Seminars
@@ -294,7 +294,7 @@ namespace SeminarHub.Controllers
                 .Select(s => new SeminarDetailsVewModel()
                 {
                     Id = s.Id,
-                    Topic = s.Topic,    
+                    Topic = s.Topic,
                     DateAndTime = s.DateAndTime.ToString(DateFormat),
                     Organizer = s.Organizer.UserName,
                 })
