@@ -1,8 +1,9 @@
-﻿@{
+﻿@model EventDetailsViewModel
+@{
     ViewBag.Title = "Event Details";
 }
 
-@*
+
 <h2 class="text-center">@ViewBag.Title</h2>
 <hr />
 
@@ -22,6 +23,7 @@
         @if (User.Identity.Name == Model.Organiser)
         {
             <a asp-controller="Event" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning mb-2 w-100 p-3 fw-bold">Edit</a>
+            <a asp-controller="Event" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-warning mb-2 w-100 p-3 fw-bold">Delete</a>
         }
 
     </div>
@@ -30,4 +32,3 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-*@
